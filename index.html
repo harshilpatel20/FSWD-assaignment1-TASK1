@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harshil Patel Portfolio | Premium 3D Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    /* 3D Perspective */
+    .perspective { perspective: 1200px; }
+    .card-3d {
+      transform-style: preserve-3d;
+      transition: transform 0.6s ease;
+    }
+    .perspective:hover .card-3d {
+      transform: rotateY(15deg) rotateX(10deg);
+    }
+
+    /* Floating */
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+    .floating { animation: float 4s ease-in-out infinite; }
+
+    /* Rotate */
+    @keyframes rotate3d {
+      0% { transform: rotateY(0deg); }
+      100% { transform: rotateY(360deg); }
+    }
+    .rotate-3d { animation: rotate3d 12s linear infinite; }
+
+    /* Progress Animation */
+    @keyframes progress {
+      from { width: 0; }
+    }
+    .progress-bar {
+      animation: progress 2s ease forwards;
+    }
+  </style>
+</head>
+
+<body class="bg-black text-white font-sans">
+    
+
+<!-- Navbar -->
+<nav class="fixed w-full bg-black/80 backdrop-blur-md z-50 border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between">
+    <h1 class="text-2xl font-bold tracking-widest">My Portfolio</h1>
+    <div class="hidden md:flex space-x-8 text-sm uppercase">
+      <a href="#home" class="hover:text-gray-400">Home</a>
+      <a href="#about" class="hover:text-gray-400">About</a>
+      <a href="#skills" class="hover:text-gray-400">Skills</a>
+      <a href="#services" class="hover:text-gray-400">Services</a>
+      <a href="#hobbies" class="hover:text-gray-400">Hobbies</a>
+      <a href="#projects" class="hover:text-gray-400">Projects</a>
+      <a href="#contact" class="hover:text-gray-400">Contact</a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Hero -->
+<section id="home" class="min-h-screen flex flex-col items-center justify-center text-center px-6">
+
+  <div class="floating">
+    <h2 class="text-5xl md:text-7xl font-extrabold mb-6">
+      Hii i am HARSHIL PATEL
+    </h2>
+    <p class="text-gray-400 text-lg md:text-2xl">
+      Frontend Developer • UI Designer • Creative Coder
+    </p>
+  </div>
+
+  <div class="perspective mt-12">
+    <div class="rotate-3d">
+      <img src="harshil patel.jpeg"
+        class="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-white shadow-2xl object-cover">
+    </div>
+  </div>
+
+
+  <!-- View My Work Button -->
+<div class="mt-8">
+  <a href="#projects"
+     class="relative inline-block px-10 py-4 text-lg font-semibold uppercase tracking-wider
+     border-2 border-white overflow-hidden group transition duration-500">
+
+
+    <!-- Button Text -->
+    <span class="relative z-10 group-hover:text-black transition duration-500">
+      View My Work
+    </span>
+
+
+    <!-- Animated Background -->
+    <span class="absolute left-0 top-0 w-0 h-full bg-white
+                 group-hover:w-full transition-all duration-500">
+    </span>
+
+  </a>
+</div>
+
+</section>
+
+
+<!-- About -->
+<section id="about" class="py-24 bg-white text-black text-center px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-4xl font-bold mb-6">About Me</h2>
+    <p class="text-gray-700 text-lg leading-relaxed">
+      I create modern, responsive and interactive websites using HTML5,
+      Tailwind CSS and JavaScript. I love building clean UI with smooth
+      animations and 3D effects that enhance user experience.
+    </p>
+  </div>
+</section>
+
+
+<!-- Skills -->
+<section id="skills" class="py-24 bg-black px-6">
+  <div class="max-w-4xl mx-auto">
+    
+    <h2 class="text-4xl font-bold text-center mb-16">Skills</h2>
+
+    <div class="space-y-10">
+
+      <!-- Skill Item -->
+      <div>
+        <div class="flex justify-between mb-2">
+          <p>HTML5</p>
+          <p>90%</p>
+        </div>
+        <div class="w-full bg-gray-800 h-3 rounded">
+          <div class="bg-white h-3 rounded progress-bar" style="width:90%"></div>
+        </div>
+      </div>
+
+      <!-- Skill Item -->
+      <div>
+        <div class="flex justify-between mb-2">
+          <p>Tailwind CSS</p>
+          <p>85%</p>
+        </div>
+        <div class="w-full bg-gray-800 h-3 rounded">
+          <div class="bg-white h-3 rounded progress-bar" style="width:85%"></div>
+        </div>
+      </div>
+
+      <!-- Skill Item -->
+      <div>
+        <div class="flex justify-between mb-2">
+          <p>JavaScript</p>
+          <p>80%</p>
+        </div>
+        <div class="w-full bg-gray-800 h-3 rounded">
+          <div class="bg-white h-3 rounded progress-bar" style="width:80%"></div>
+        </div>
+      </div>
+
+      <!-- Skill Item -->
+      <div>
+        <div class="flex justify-between mb-2">
+          <p>Python</p>
+          <p>75%</p>
+        </div>
+        <div class="w-full bg-gray-800 h-3 rounded">
+          <div class="bg-white h-3 rounded progress-bar" style="width:75%"></div>
+        </div>
+      </div>
+
+      <!-- Skill Item -->
+      <div>
+        <div class="flex justify-between mb-2">
+          <p>PHP & MySQL</p>
+          <p>70%</p>
+        </div>
+        <div class="w-full bg-gray-800 h-3 rounded">
+          <div class="bg-white h-3 rounded progress-bar" style="width:70%"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Services -->
+<section id="services" class="py-24 bg-white text-black px-6 text-center">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold mb-16">Services</h2>
+
+    <div class="grid md:grid-cols-3 gap-10">
+
+      <div class="perspective">
+        <div class="card-3d p-8 border border-black">
+          <h3 class="text-xl font-bold mb-4">Web Design</h3>
+          <p>Modern and minimal website design with clean layout.</p>
+        </div>
+      </div>
+
+      <div class="perspective">
+        <div class="card-3d p-8 border border-black">
+          <h3 class="text-xl font-bold mb-4">Responsive Design</h3>
+          <p>Mobile-friendly websites for all screen sizes.</p>
+        </div>
+      </div>
+
+      <div class="perspective">
+        <div class="card-3d p-8 border border-black">
+          <h3 class="text-xl font-bold mb-4">UI Animation</h3>
+          <p>Smooth 3D animations and interactive effects.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Hobbies -->
+<section id="hobbies" class="py-24 bg-white text-black px-6 text-center">
+  <div class="max-w-6xl mx-auto">
+    
+    <h2 class="text-4xl font-bold mb-16">My Hobbies</h2>
+
+    <div class="grid md:grid-cols-3 gap-10">
+
+      <!-- Hobby 1 -->
+      <div class="perspective">
+        <div class="card-3d p-8 border border-black hover:shadow-2xl transition">
+          <div class="text-5xl mb-4">💻</div>
+          <h3 class="text-xl font-bold mb-3">Coding</h3>
+          <p class="text-gray-600">
+            I enjoy building creative websites and exploring new technologies.
+          </p>
+        </div>
+      </div>
+
+      <!-- Hobby 2 -->
+      <div class="perspective">
+        <div class="card-3d p-8 border border-black hover:shadow-2xl transition">
+          <div class="text-5xl mb-4">🎨</div>
+          <h3 class="text-xl font-bold mb-3">UI Designing</h3>
+          <p class="text-gray-600">
+            Designing modern and clean user interfaces is my passion.
+          </p>
+        </div>
+      </div>
+
+      <!-- Hobby 3 -->
+      <div class="perspective">
+        <div class="card-3d p-8 border border-black hover:shadow-2xl transition">
+          <div class="text-5xl mb-4">✈️</div>
+          <h3 class="text-xl font-bold mb-3">Traveling</h3>
+          <p class="text-gray-600">
+            I love exploring new places and learning about different cultures.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Projects -->
+<section id="projects" class="py-24 bg-black px-6 text-center">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-4xl font-bold mb-16 text-white">Projects</h2>
+
+    <div class="grid md:grid-cols-3 gap-12">
+
+      <!-- Project 1 -->
+      <div class="perspective">
+        <div class="card-3d bg-black border border-white shadow-xl overflow-hidden">
+
+
+          <!-- Screenshot -->
+          <div class="relative group">
+            <img src="Screenshot 2026-02-16 130016.png" 
+                 class="w-full h-60 object-cover">
+
+
+            <!-- Hover Overlay -->
+            <div class="absolute inset-0 bg-white/90 flex items-center justify-center 
+                        opacity-0 group-hover:opacity-100 transition duration-500">
+
+              <a href="#"
+                 class="border border-black px-6 py-2 text-black 
+                        hover:bg-black hover:text-white transition">
+                View Project
+              </a>
+
+            </div>
+          </div>
+
+
+          <!-- Content -->
+          <div class="p-6 text-white">
+            <h3 class="text-xl font-bold mb-2">Tours & Travels</h3>
+            <p class="text-gray-400">
+              Modern travel booking platform with responsive design.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="perspective">
+        <div class="card-3d bg-black border border-white shadow-xl overflow-hidden">
+
+          <div class="relative group">
+            <img src="Screenshot 2026-02-16 130910.png" 
+                 class="w-full h-60 object-cover">
+
+            <div class="absolute inset-0 bg-white/90 flex items-center justify-center 
+                        opacity-0 group-hover:opacity-100 transition duration-500">
+
+              <a href="#"
+                 class="border border-black px-6 py-2 text-black 
+                        hover:bg-black hover:text-white transition">
+                View Project
+              </a>
+
+            </div>
+          </div>
+
+          <div class="p-6 text-white">
+            <h3 class="text-xl font-bold mb-2">Cake Shop</h3>
+            <p class="text-gray-400">
+              E-commerce website with modern UI and animations.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="perspective">
+        <div class="card-3d bg-black border border-white shadow-xl overflow-hidden">
+
+          <div class="relative group">
+            <img src="Screenshot 2026-02-16 130626.png" 
+                 class="w-full h-60 object-cover">
+
+            <div class="absolute inset-0 bg-white/90 flex items-center justify-center 
+                        opacity-0 group-hover:opacity-100 transition duration-500">
+
+              <a href="#"
+                 class="border border-black px-6 py-2 text-black 
+                        hover:bg-black hover:text-white transition">
+                View Project
+              </a>
+
+            </div>
+          </div>
+
+          <div class="p-6 text-white">
+            <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
+            <p class="text-gray-400">
+              Animated 3D portfolio built using HTML5 & Tailwind CSS.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact -->
+<section id="contact" class="py-24 bg-white text-black text-center px-6">
+  <div class="max-w-3xl mx-auto">
+    
+    <h2 class="text-4xl font-bold mb-10">Contact Me</h2>
+
+
+    <!-- Contact Info -->
+    <div class="mb-10 space-y-4 text-lg">
+
+
+      <!-- Phone -->
+      <p>
+        📞 Phone: 
+        <a href="tel:+91 9106044634" 
+           class="font-semibold hover:underline">
+           +91 91060 44634
+        </a>
+      </p>
+
+
+      <!-- Email -->
+      <p>
+        📧 Email: 
+        <a href="mailto:hP4320961@email.com" 
+           class="font-semibold hover:underline">
+           hP4320961@email.com
+        </a>
+      </p>
+
+    </div>
+
+
+    <!-- Contact Form -->
+    <div class="space-y-6">
+      <input type="text" placeholder="Your Name"
+        class="w-full border border-black p-3 focus:ring-2 focus:ring-black">
+
+      <input type="email" placeholder="Your Email"
+        class="w-full border border-black p-3 focus:ring-2 focus:ring-black">
+
+      <textarea rows="5" placeholder="Your Message"
+        class="w-full border border-black p-3 focus:ring-2 focus:ring-black"></textarea>
+
+      <button class="bg-black text-white px-8 py-3 hover:scale-105 transition">
+        Send Message
+      </button>
+    </div>
+
+</section>
+
+
+    <!-- Social Links -->
+    <div class="flex justify-center space-x-6 mt-10 text-xl">
+      <a href="#" class="hover:text-gray-500">LinkedIn</a>
+      <a href="#" class="hover:text-gray-500">GitHub</a>
+      <a href="#" class="hover:text-gray-500">Instagram</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-black text-center py-6 border-t border-white/10">
+  <p class="text-gray-400">© 2026 Harshil Patel | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
